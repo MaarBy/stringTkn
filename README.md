@@ -1,1 +1,1 @@
-String tokens
+StringTokenizer simple example.
