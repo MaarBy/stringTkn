@@ -28,7 +28,6 @@ public class Article {
 		this.inputDate = gregorianCalendar.getTime();
 	}
 	
-	
 	public double getPrice() {
 		return this.price;
 	}
@@ -53,13 +52,10 @@ public class Article {
 		this.inputDate = inputDate;
 	}
 
-	
 	public void setInputDate(int year, int month, int day)	{
 		GregorianCalendar calendar = new GregorianCalendar(year, month, day);
 		this.inputDate = calendar.getTime();
 	}
-	
-	
 	
 	@Override
 	public String toString()	{
@@ -71,8 +67,6 @@ public class Article {
 			+ calendar.get(Calendar.DAY_OF_MONTH) + " day ";
 	}
 
-
-	
 	public static void writeIntoFile(Article[] article, PrintWriter outputStream)	{
         outputStream.println(article.length);
         GregorianCalendar calendar = new GregorianCalendar();
@@ -87,40 +81,25 @@ public class Article {
         }
     }
 
-
-	
 	public static Article[] readFromFile(BufferedReader inputStream) throws IOException	    {
-		
-		
+			
         int articlesTableLength = Integer.parseInt(inputStream.readLine());
         
         Article[] article = new Article[articlesTableLength];
         
-        for (int i = 0; i < articlesTableLength; i++)	{
-        	
+        for (int i = 0; i < articlesTableLength; i++)	{	
             String readLine = inputStream.readLine();
             StringTokenizer token = new StringTokenizer(readLine, ":");
-            
-            
-            
+           
             double price = Double.parseDouble(token.nextToken());
             String name = token.nextToken();
             int year = Integer.parseInt(token.nextToken());
             int month = Integer.parseInt(token.nextToken());
             int day = Integer.parseInt(token.nextToken());
-            
-            
-            
-            
             article[i] = new Article(price, name, year, month, day);	
         }
-        
-        
         return article;
     }
-	
-	
-	
 	private double price;
 	private String name;
 	private Date inputDate;
