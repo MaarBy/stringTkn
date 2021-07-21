@@ -14,22 +14,16 @@ public class Main {
 		
 		try {
 			PrintWriter writer = new PrintWriter(new FileWriter("testFile.txt"));
-			
 //			Article.writeIntoFile(article, writer);
-			
 			writer.close();
-			
 //			BufferedReader reader = new BufferedReader(new FileReader("testFile.txt"));
 //            
 //            Article[] article2 = Article.readfromFile(reader);
-//            
 //            for (int i = 0; i < article2.length; i++)
 //                System.out.println(article2[i]);
-//            
 //            reader.close();
 		} 
 		catch (IOException e) {
 			System.out.println(e.getMessage());		}
 	}
-	
 }
