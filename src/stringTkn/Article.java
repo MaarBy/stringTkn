@@ -84,13 +84,11 @@ public class Article {
 	public static Article[] readFromFile(BufferedReader inputStream) throws IOException	    {
 			
         int articlesTableLength = Integer.parseInt(inputStream.readLine());
-        
         Article[] article = new Article[articlesTableLength];
         
         for (int i = 0; i < articlesTableLength; i++)	{	
             String readLine = inputStream.readLine();
             StringTokenizer token = new StringTokenizer(readLine, ":");
-           
             double price = Double.parseDouble(token.nextToken());
             String name = token.nextToken();
             int year = Integer.parseInt(token.nextToken());
