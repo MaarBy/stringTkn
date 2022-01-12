@@ -14,8 +14,7 @@ public class Main {
 		
 		try {
 			PrintWriter writer = new PrintWriter(new FileWriter("testFile.txt"));
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 //			Article.writeIntoFile(article, writer);
 			writer.close();
 //			BufferedReader reader = new BufferedReader(new FileReader("testFile.txt"));
@@ -24,17 +23,14 @@ public class Main {
 //            for (int i = 0; i < article2.length; i++)
 //                System.out.println(article2[i]);
 //            reader.close();
-=======
 			
 			Article.writeIntoFile(article, writer);
 			
 			writer.close();
-=======
 			
 			Article.writeIntoFile(article, writer);
 			
 			writer.close();
->>>>>>> Stashed changes
 			
 			BufferedReader reader = new BufferedReader(new FileReader("testFile.txt"));
             
@@ -44,10 +40,7 @@ public class Main {
                 System.out.println(article2[i]);
             
             reader.close();
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 		} 
 		catch (IOException e) {
 			System.out.println(e.getMessage());		
